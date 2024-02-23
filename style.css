@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav_container {
+  width: 100%;
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background: #fff;
+}
+.main_container {
+  width: 85%;
+  padding: 0 5px 5px 0;
+}
+
+.side_container {
+  width: 15%;
+  height: 92vh;
+  position: sticky;
+  top: 8vh;
+  padding: 0 5px 5px;
+}
+
+nav,
+main,
+.side {
+  /* flex: 0 0 auto; */
+  height: 100%;
+  border-radius: 7px;
+}
+
+/* Navbar */
+nav {
+  background: #4169e1;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 4.5rem;
+}
+
+.nav_link a {
+  padding: 0.4rem;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  position: relative;
+}
+
+.active_link {
+  background: #fff;
+  color: #4169e1;
+}
+
+.nav_link a::after {
+  position: absolute;
+  top: 0;
+  left: 50;
+  transform: translate(-50%);
+  text-align: center !important;
+  font-size: 70%;
+  line-height: 1;
+  color: #fff;
+}
+
+.nav_link:nth-child(1) a::after {
+  content: "Home";
+}
+
+.nav_link:nth-child(2) a::after {
+  content: "Services";
+}
+
+.nav_link:nth-child(3) a::after {
+  content: "Education";
+}
+
+.nav_link:nth-child(4) a::after {
+  content: "Experience";
+}
+
+.nav_link:nth-child(5) a::after {
+  content: "Portfolio";
+}
+.nav_link:nth-child(6) a::after {
+  content: "Contact Me";
+}
+
+/* Left Side */
+.side {
+  display: flex;
+  flex-direction: column;
+  background: #4169e1;
+  justify-content: space-between;
+  padding: 10px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.me img {
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+.me p {
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: 1px;
+}
+
+.me p a {
+  color: #fff;
+  line-height: 2;
+  margin: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.me p a:hover {
+  color: #777;
+}
+
+.me span {
+  background: #fff;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  color: #4169e1;
+}
+
+.info {
+  font-size: 14px;
+}
+
+.skills div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 2.6;
+}
+
+.count:nth-child(2) {
+  height: 2px;
+  width: 90%;
+  background: #fff;
+}
+.count:nth-child(4) {
+  height: 2px;
+  width: 60%;
+  background: #fff;
+}
+.count:nth-child(6) {
+  height: 2px;
+  width: 50%;
+  background: #fff;
+}
+.count:nth-child(8) {
+  height: 2px;
+  width: 40%;
+  background: #fff;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 7px;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #4169e1;
+}
+
+/* Main */
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  background: linear-gradient(to top left, #fff, #4169e1);
+  border-radius: 7px;
+  padding: 0 10px;
+  margin-bottom: 3rem;
+}
+
+.display-1 {
+  font-size: calc(4vw);
+}
+.display-2 {
+  font-size: calc(2.5vw);
+}
+
+/* Sections */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.section_head {
+  width: 50%;
+  color: #777;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section_body {
+  width: 100%;
+}
+
+/* Services */
+#services .section_body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-33 {
+  /* flex: 0 0 auto; */
+  width: 33.33%;
+  padding: 5px;
+}
+
+.card {
+  border-radius: 7px;
+  background: #4169e1;
+  padding: 1rem;
+}
+
+.card div i {
+  border-radius: 7px;
+  background: #fff;
+  color: #4169e1;
+  padding: 0.7rem;
+}
+
+/* Education */
+#experience .section_body,
+#education .section_body {
+  background: #4169e1;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.white_line {
+  background: #fff;
+  height: 1px;
+  margin: 1rem 0;
+}
+
+.text {
+  display: flex;
+}
+
+.text h3 {
+  width: 50%;
+}
+
+/* For small screen */
+@media screen and (max-width: 767px) {
+  .nav_container {
+    height: 45px;
+  }
+  .side_container {
+    display: none;
+  }
+  .main_container {
+    width: 100%;
+    padding: 0 5px 5px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  nav ul li a {
+    padding: 0.3rem;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .section_head {
+    width: 90%;
+  }
+  .col-33 {
+    /* flex: 0 0 auto; */
+    width: 100%;
+    padding: 5px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* If the left side is absent depending on the device, the height of the navbar on that screen should be 45px */
+
+/* Customized scrollbar */
+/* Colors */
+/* Blinking Cursor/Border for the typewriter effect */
+/* Perfect border radius */
+/* Inheritable Properties */
+/* #fff */
